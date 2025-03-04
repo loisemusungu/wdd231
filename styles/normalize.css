@@ -7,10 +7,13 @@
     --block-header-footer-color: black;
 }
 
-.content {
-    margin: 0px auto;
+body {
+    margin: 10px auto;
     padding: 10px;
     max-width: 960px;
+    height: auto;
+}
+.content {
     text-align: center;
     border: 1px solid var(--block-header-footer-color);
     font-family: 'Poppins', sans-serif;
@@ -21,7 +24,7 @@
 /* Header */
 
 .header {
-    background-color: var(--block-header-footer-color);
+    background-color: var(--text-color);
     color: var(--heading-color);
     display: flex;
     justify-content: center;
@@ -91,4 +94,59 @@ h3 {
     border-radius: 8px;
     width: 200px;
     height: 100%;
+}
+
+.courses-list {
+    display: flex;
+	flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.units section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+button {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    color: var(--text-color);
+}
+
+.courses-wrapper {
+    border: 1px solid var(--block-header-footer-color);
+    background-color: var(--heading-color);
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--block-header-footer-color);
+    margin: 20px 0;
+}
+
+.footer {
+    background-color: var(--text-color);
+    color: var(--heading-color);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 20px;
 }
