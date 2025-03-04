@@ -20,12 +20,65 @@
     <script src="scripts/course.js" defer></script>
 </head>
 <body>
-    <header>
-        <img src="images/loise-profile-pic.jpeg" alt="Loise Profile Picture" width="100 px">
+    <header class="header">
+        <img class="profile-pic"src="images/loise-profile-pic.jpeg" alt="Loise Profile Picture" width="100 px">
         <h1>Loise Musungu</h1>
     </header>
-    <nav></nav>
-    <main></main>
-    <footer></footer>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html" title="Home">Home</a></li>
+            <li><a href="chamber.html" title="Chamber" class="active">Chamber</a></li>
+            <li><a href="github-profile.html" title="GitHub Profile">GitHub Profile</a></li>
+            <li><a href="linkedin.html" title="LinkedIn">LinkedIn</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Home</h2>
+        <div class="container">
+            <section>
+                <h3>Course Work</h3>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Nairobi, Kenya</h3>
+                <img src="images/nairobi.jpeg" alt="Nairobi, Kenya" width="200">
+            </section>
+        </div>
+        <div class="courses">
+            <section>
+                <h3>Web and Computer Programming Certificate</h3>
+                    <section>
+                        <button type="button">All</button>
+                        <button type="button">CSE</button>
+                        <button type="button">WDD</button>
+                    </section>
+            </section>
+        </div>
+        <div class="units">
+            <section>
+                <button type="button">CSE 110</button>
+                <button type="button">WDD 130</button>
+                <button type="button">CSE 111</button>
+                <button type="button">CSE 210</button>
+                <button type="button">WDD 131</button>
+                <button type="button">WDD 231</button>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div>
+            &copy;
+            <span id="currentyear"></span>
+            👩🏽‍💻Loise Musungu. Kenya 🇰🇪
+                <div>Last Modified 
+                    <span id="lastmodifications"></span>
+                </div>
+        </div>
+    </footer>
 </body>
 </html>
