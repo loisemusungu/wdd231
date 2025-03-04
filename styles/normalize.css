@@ -18,6 +18,8 @@
     color: var(--text-color);
 }
 
+/* Header */
+
 .header {
     background-color: var(--block-header-footer-color);
     color: var(--heading-color);
@@ -26,11 +28,67 @@
     gap: 10px;
     padding: 10px;
     margin-bottom: 10px;
-    width: 100%;
 }
 
 .profile-pic {
     border-radius: 8px;
     width: 80px;
     height: 100px;
+}
+
+/* Navigation */
+
+.navigation {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+    align-items: center;
+	list-style: none;
+	background-color: var(--button-color);
+	color: var(--body-text-color);
+    border: 1px solid var(--button-hover-color);
+    padding: 0;
+}
+
+.navigation li {
+    margin: 0 10px;
+}
+.navigation a {
+	display: block;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: var(--body-text-color);
+}
+.navigation a:hover {
+	background-color: var(--block-header-footer-color);
+	color: var(--background-color);
+	font-weight: 700;
+}
+
+/* container */
+.main-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    align-items: start;
+}
+
+.container-one, .container-two {
+    justify-items: center;
+    border: 1px solid var(--block-header-footer-color);
+    background-color: var(--heading-color);
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    background-color: var(--button-color);
+    
+}
+
+.nairobi-pic {
+    border-radius: 8px;
+    width: 200px;
+    height: 100%;
 }
