@@ -41,7 +41,7 @@ body {
 
 /* Navigation */
 
-.navigation {
+.navigation ul{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -72,6 +72,22 @@ body {
 .active::before {
 	content: "📍";  /* just a wayfinding symbol for the user */
 } 
+
+/* Hamburger Icon Styles */
+.hamburger {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+/* When the menu is open, show it */
+.navigation.open {
+    display: flex;
+}
+
 /* container */
 .main-wrapper {
     display: grid;

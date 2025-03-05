@@ -26,22 +26,41 @@
     }
 
     /* Navigation */
-    .navigation {
+    .navigation{
+        display: none;
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
+        padding: 20px;
     }
 
     .navigation li {
-        margin: 5px 0;
+        margin: 10px 0;
+        
     }
 
     .navigation a {
         padding: 0.8rem;
+        text-decoration: none;
+        
+    }
+
+    .navigation a:hover {
+        background-color: var(--block-header-footer-color);
+        color: var(--background-color);
     }
 
     .active::before {
         margin-right: 5px;
     }
+
+    .hamburger {
+        display: block; /* Show the hamburger icon */
+    }
+    /* When the menu is open, show it */
+    .navigation-menu.open {
+        display: block;
+    }
+
 
     /* Main Wrapper (Grid) */
     .main-wrapper {
