@@ -66,3 +66,52 @@ const courses = [
     completed: false,
   },
 ];
+
+const coursesContainer = document.getElementById("courses-container");
+const totalCreditsElement = document.getElementById("total-credits");
+
+// Function to render the courses based on the filter
+function renderCourses(filteredCourses) {
+  coursesContainer.innerHTML = ""; // Clear previous courses
+
+  let totalCredits = 0;
+
+  filteredCourses.forEach((course) => {
+    const courseElement = document.createElement("div");
+    courseElement.classList.add("flashcard");
+
+    // Add styles based on completion status
+    if (course.completed) {
+      courseElement.classList.add("completed");
+    } else {
+      courseElement.classList.add("incomplete");
+    }
+
+    // Set the course title
+    courseElement.innerText = `${course.subject} ${course.number}: ${course.title}`;
+
+    coursesContainer.appendChild(courseElement);
+
+    // Accumulate total credits
+    totalCredits += course.credits;
+  });
+
+  // Update total credits dynamically
+  totalCreditsElement.innerText = `Total Credits: ${totalCredits}`;
+}
+
+// Function to filter courses based on the selected category
+function filterCourses(category) {
+  let filteredCourses;
+
+  if (category === "all") {
+    filteredCourses = courses;
+  } else {
+    filteredCourses = courses.filter((course) => course.subject === category);
+  }
+
+  renderCourses(filteredCourses);
+}
+
+// Initialize with all courses
+filterCourses("all");

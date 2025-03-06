@@ -148,6 +148,21 @@ h3 {
     transform: scale(1.05);
 }
 
+.completed {
+    background-color: var(--button-color); /* Mustard Yellow for completed courses */
+    color: var(--text-color);
+}
+
+.incomplete {
+    background-color: var(--text-color);
+    color: var(--button-color);
+}
+
+#total-credits {
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
 button {
     background-color: var(--text-color);
     color: var(--background-color);
