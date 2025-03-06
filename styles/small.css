@@ -16,18 +16,24 @@
     /* Header */
     .header {
         gap: 15px;
-        padding: 8px;
+        padding: 3px;
     }
 
     .profile-pic {
-        width: 60px;
-        height: 80px;
+        width: 40px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1rem;
+        padding: 10px;
     }
 
     /* Navigation */
     .navigation{
         display: none;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         padding: 20px;
     }
@@ -99,9 +105,8 @@
 
     /* Footer */
     .footer {
-        flex-direction: column;
-        gap: 5px;
         padding: 10px;
+        font-size: 0.8rem;
     }
 
     /* Courses Wrapper */
