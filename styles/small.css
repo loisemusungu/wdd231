@@ -15,8 +15,7 @@
 
     /* Header */
     .header {
-        flex-direction: column;
-        gap: 5px;
+        gap: 15px;
         padding: 8px;
     }
 

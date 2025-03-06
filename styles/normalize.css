@@ -78,14 +78,14 @@ body {
     font-size: 30px;
     background: none;
     border: none;
-    color: var(--text-color);
+    color: var(--button-color);
     cursor: pointer;
     display: none;
 }
 
 /* When the menu is open, show it */
 .navigation.open {
-    display: flex;
+    display: block;
 }
 
 /* container */
