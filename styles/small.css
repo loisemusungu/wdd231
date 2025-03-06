@@ -79,12 +79,11 @@
 
     /* Courses List (Flexbox) */
     .courses-list {
-        flex-direction: column;
-        gap: 10px;
+        grid-template-columns: repeat(3, 1fr)
     }
 
     .units section {
-        grid-template-columns: repeat(2, 1fr); /* Adjust for smaller screens */
+        grid-template-columns: repeat(1, 1fr); /* Adjust for smaller screens */
     }
 
     /* Flashcards */
