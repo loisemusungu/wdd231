@@ -19,18 +19,91 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/chamber/styles/normalize.css">
+    <link rel="stylesheet" href="/chamber/styles/small.css">
+    <link rel="stylesheet" href="/chamber/styles/larger.css">
 
-    <script src="scripts/date.js" defer></script>
-    <script src="scripts/navigation.js" defer></script>
+    <script src="/chamber/scripts/date.js" defer></script>
+    <script src="/chamber/scripts/navigation.js" defer></script>
     <script src="" defer></script>
 
     <link rel="icon" href="/chamber/images/favicon.ico">
 
 </head>
 <body>
-    
+    <div class="content">
+        <header class="header">
+            
+            <img class="profile-pic" src="images/loise-profile-pic.png" alt="Loise Profile Picture">
+            
+
+                <button class="hamburger" id="hamburger-menu" aria-label="Open navigation menu">
+                    &#9776; <!-- Hamburger icon -->
+                </button>
+        </header>
+        
+        <nav class="navigation" id="nav-menu">
+            <ul>
+                <li><a href="index.html" title="Home" class="active">Home</a></li>
+                <li><a href="#" title="Chamber">Chamber</a></li>
+                <li><a href="https://github.com/loisemusungu" target="_blank" title="GitHub Profile">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/loise-musungu/" target="_blank" title="LinkedIn">LinkedIn</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Loise Musungu Course Homepage</h1>
+            <h2>Home</h2>
+            <div class="main-wrapper">
+                <div class="container-one">
+                    <section>
+                        <h3>Course Work</h3>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="container-two">
+                    <section>
+                        <h3>Nairobi, Kenya</h3>
+                        <img class="nairobi-pic" src="images/nairobi.png" alt="Nairobi, Kenya">
+                    </section>
+                </div>
+            </div>
+                <div class="courses-wrapper">
+                    <div class="courses">
+                        <section>
+                            <h3>Web and Computer Programming Certificate</h3>
+                            <section class="courses-list">
+                                <button type="button" onclick="filterCourses('all')">All</button>
+                                <button type="button" onclick="filterCourses('CSE')">CSE</button>
+                                <button type="button" onclick="filterCourses('WDD')">WDD</button>
+                            </section>
+                        </section>
+                    </div>
+                    <hr>
+                    <div class="units">
+                        <section id="courses-container">
+                            <!-- Course flashcards will be dynamically inserted here -->
+                        </section>
+                        <div id="total-credits">
+                            <!-- Total credits will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+        </main>
+        <footer class="footer">
+            <div>
+                &copy;
+                <span id="currentyear"></span>
+                👩🏽‍💻Loise Musungu. Kenya 🇰🇪
+                    <div>Last Modified 
+                        <span id="lastmodifications"></span>
+                    </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
