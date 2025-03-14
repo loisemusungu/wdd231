@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Tech Innovators Kenya",
+    "address": "123 Mombasa Road, Nairobi, Kenya",
+    "phone": "+254 700 123456",
+    "website": "https://www.techinnovators.co.ke",
+    "image": "tech_innovators_ke.png",
+    "membership_level": 3,
+    "industry": "Technology",
+    "founded": 2012
+  },
+  {
+    "name": "Green Energy Africa",
+    "address": "78 Ngong Lane, Nairobi, Kenya",
+    "phone": "+254 711 234567",
+    "website": "https://www.greenenergyafrica.co.ke",
+    "image": "green_energy_africa.png",
+    "membership_level": 2,
+    "industry": "Renewable Energy",
+    "founded": 2017
+  },
+  {
+    "name": "Equity Finance Ltd.",
+    "address": "456 Kenyatta Avenue, Nairobi, Kenya",
+    "phone": "+254 722 345678",
+    "website": "https://www.equityfinance.co.ke",
+    "image": "equity_finance_logo.jpg",
+    "membership_level": 1,
+    "industry": "Finance",
+    "founded": 2005
+  },
+  {
+    "name": "EduFuture Academy Kenya",
+    "address": "321 Waiyaki Way, Nairobi, Kenya",
+    "phone": "+254 733 456789",
+    "website": "https://www.edufuture.co.ke",
+    "image": "edu_future_kenya.png",
+    "membership_level": 3,
+    "industry": "Education",
+    "founded": 2010
+  },
+  {
+    "name": "MedTech Solutions Kenya",
+    "address": "654 Hospital Road, Nairobi, Kenya",
+    "phone": "+254 744 567890",
+    "website": "https://www.medtechsolutions.co.ke",
+    "image": "medtech_ke_logo.png",
+    "membership_level": 2,
+    "industry": "Healthcare Technology",
+    "founded": 2014
+  },
+  {
+    "name": "Crafted Creations Ltd.",
+    "address": "987 Karen Street, Nairobi, Kenya",
+    "phone": "+254 755 678901",
+    "website": "https://www.craftedcreations.co.ke",
+    "image": "crafted_creations_logo.jpg",
+    "membership_level": 1,
+    "industry": "Retail & Handicrafts",
+    "founded": 2018
+  },
+  {
+    "name": "Swift Logistics Kenya",
+    "address": "741 Industrial Area, Nairobi, Kenya",
+    "phone": "+254 766 789012",
+    "website": "https://www.swiftlogistics.co.ke",
+    "image": "swift_logistics_ke.png",
+    "membership_level": 3,
+    "industry": "Transportation & Logistics",
+    "founded": 2008
+  },
+  {
+    "name": "CyberSecure Africa",
+    "address": "159 Data Protection Way, Nairobi, Kenya",
+    "phone": "+254 777 890123",
+    "website": "https://www.cybersecureafrica.co.ke",
+    "image": "cybersecure_africa_logo.png",
+    "membership_level": 2,
+    "industry": "Cybersecurity",
+    "founded": 2016
+  },
+  {
+    "name": "BlueWave Digital Kenya",
+    "address": "951 Westlands, Nairobi, Kenya",
+    "phone": "+254 788 901234",
+    "website": "https://www.bluewavedigital.co.ke",
+    "image": "bluewave_digital_ke.jpg",
+    "membership_level": 1,
+    "industry": "Marketing & Advertising",
+    "founded": 2013
+  }
+]
