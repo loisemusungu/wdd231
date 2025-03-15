@@ -1,0 +1,114 @@
+/* ==============================
+   Mobile Responsive Styles
+================================= */
+@media screen and (max-width: 768px) {
+    * General Body Styles */
+    body {
+        margin: 10px;
+        padding: 10px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .content {
+        padding: 15px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    /* Header */
+    .header {
+        gap: 15px;
+        padding: 3px;
+    }
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    /* Hide the normal nav links */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: var(--secondary-color);
+        position: absolute;
+        top: 150px; /* Adjust based on your header height */
+        left: 0;
+        z-index: 1000;
+        padding: 10px 0;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    nav ul li:hover {
+        background-color: var(--primary-color);
+    }
+
+    /* Show nav when 'open' class is added */
+    nav ul.open {
+        display: flex;
+    }
+
+    /* Adjust list items for vertical stacking */
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+    /* Style the hamburger menu */
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero-image img {
+        width: 100%;
+    }
+
+    .button {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .button a {
+        display: inline-block;
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    /* Adjusting the Events Grid to Single Column */
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Business Directory */
+    .directory {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer Adjustments */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-contact,
+    .footer-socials,
+    .footer-rightside {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
