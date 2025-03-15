@@ -1,50 +1,79 @@
-async function fetchMemberData() {
+// Asynchronous function to fetch and populate the business directory
+async function populateBusinessDirectory() {
   try {
-    // Fetch the JSON data
+    // Fetch the JSON data from the local member.json file
     const response = await fetch("./scripts/members.json");
 
-    // Check if the response is OK (status code 200-299)
+    // Check if the response is ok (status code 200-299)
     if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
+      throw new Error("Network response was not ok");
     }
 
-    // Parse the JSON data
-    const members = await response.json();
+    // Parse the response as JSON
+    const businesses = await response.json();
 
-    // Get the directory container to insert content into
-    const container = document.getElementById("directory-container");
+    // Get the directory container element
+    const directoryElement = document.querySelector(".directory");
 
-    // Loop through each member and create flashcards
-    members.forEach((member) => {
-      // Create a div for each flashcard
-      const flashcard = document.createElement("div");
-      flashcard.classList.add("flashcard"); // Add a class for styling
+    // Loop through each business in the JSON data
+    businesses.forEach((business) => {
+      // Create a new div for each business
+      const businessDiv = document.createElement("div");
+      businessDiv.classList.add("business");
 
-      // Add the front of the flashcard (e.g., name, image)
-      flashcard.innerHTML = `
-          <h3>${member.name}</h3>
-          <img src="${member.image}" alt="${member.name}" />
-          <p><strong>Address:</strong> ${member.address}</p>
-          <p><strong>Phone:</strong> ${member.phone}</p>
-          <p><strong>Website:</strong> <a href="${
-            member.website
-          }" target="_blank">${member.website}</a></p>
-          <p><strong>Membership Level:</strong> ${
-            member.membership_level === 3
-              ? "Gold"
-              : member.membership_level === 2
-              ? "Silver"
-              : "Member"
-          }</p>
-      `;
+      // Add the business header (name and tagline)
+      const businessHeader = document.createElement("div");
+      businessHeader.classList.add("business-header");
+      const businessName = document.createElement("h3");
+      businessName.textContent = business.name;
+      const businessTagline = document.createElement("p");
+      businessTagline.textContent = business.tagline;
+      businessHeader.appendChild(businessName);
+      businessHeader.appendChild(businessTagline);
 
-      // Append the flashcard to the container
-      container.appendChild(flashcard);
+      // Add the horizontal rule
+      const hr = document.createElement("hr");
+
+      // Add the business logo
+      const businessLogo = document.createElement("div");
+      businessLogo.classList.add("business-logo");
+      const img = document.createElement("img");
+      img.src = business.image;
+      img.alt = `${business.name} Logo`;
+      businessLogo.appendChild(img);
+
+      // Add the business details (email, phone, URL)
+      const businessDetails = document.createElement("div");
+      businessDetails.classList.add("business-details");
+      const email = document.createElement("p");
+      email.innerHTML = `<span><strong>EMAIL: </strong></span><a href="mailto:${business.name
+        .toLowerCase()
+        .replace(/\s+/g, "")}@email.com">${business.name
+        .toLowerCase()
+        .replace(/\s+/g, "")}@email.com</a>`;
+      const phone = document.createElement("p");
+      phone.innerHTML = `<span><strong>PHONE: </strong></span>${business.phone}`;
+      const website = document.createElement("p");
+      website.innerHTML = `<span><strong>URL: </strong></span><a href="${business.website}" target="_blank">${business.website}</a>`;
+
+      // Append everything to the business div
+      businessDetails.appendChild(email);
+      businessDetails.appendChild(phone);
+      businessDetails.appendChild(website);
+
+      businessDiv.appendChild(businessHeader);
+      businessDiv.appendChild(hr);
+      businessDiv.appendChild(businessLogo);
+      businessDiv.appendChild(businessDetails);
+
+      // Append the business div to the directory
+      directoryElement.appendChild(businessDiv);
     });
   } catch (error) {
-    console.error("Error fetching member data:", error);
+    // Handle any errors that occur during fetch or parsing
+    console.error("Error fetching the JSON file:", error);
   }
 }
 
-// Call the function to fetch and display data when the page loads
-fetchMemberData();
+// Call the function to populate the business directory
+populateBusinessDirectory();
