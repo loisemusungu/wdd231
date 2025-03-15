@@ -193,7 +193,7 @@ nav ul li a:hover {
 ================================= */
 .directory {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-columns: repeat(2, 1fr); /* 3 columns */
     gap: 20px;
     padding: 20px;
     margin-top: 20px;
@@ -215,7 +215,6 @@ nav ul li a:hover {
 
 .business-logo img {
     width: 100px;
-    margin-top: 10px;
 }
 
 .business-details p {
