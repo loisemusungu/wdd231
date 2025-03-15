@@ -2,7 +2,7 @@
 async function populateBusinessDirectory() {
   try {
     // Fetch the JSON data from the local member.json file
-    const response = await fetch("./scripts/members.json");
+    const response = await fetch("scripts/members.json");
 
     // Check if the response is ok (status code 200-299)
     if (!response.ok) {
