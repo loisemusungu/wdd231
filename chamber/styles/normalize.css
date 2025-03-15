@@ -83,6 +83,10 @@ nav ul li a:hover {
     display: none;
 }
 
+.active::before {
+	content: "📍";  /* just a wayfinding symbol for the user */
+} 
+
 /* ==============================
    Hero Section
 ================================= */
