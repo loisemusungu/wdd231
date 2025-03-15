@@ -1,0 +1,277 @@
+/* ==============================
+   Color Variables
+================================= */
+:root {
+    --primary-color: #004466;
+    --secondary-color: #ffcc00;
+    --accent-color: #ffaa00;
+    --background-color: #f4f4f4;
+    --text-color: #333333;
+}
+
+/* ==============================
+   General Reset
+================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ==============================
+   Body Styling
+================================= */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* ==============================
+   Header & Navigation
+================================= */
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.heading h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.heading p {
+    font-size: 1rem;
+}
+
+.logo img {
+    max-width: 90px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* ==============================
+   Hero Section
+================================= */
+.hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero-image img {
+    width: 960px;
+    height: auto;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+.button {
+    margin-top: -80px;
+    margin-left: 500px;
+}
+
+.button a {
+    text-decoration: none;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background 0.3s ease;
+}
+
+.button a:hover {
+    background: var(--background-color);
+}
+
+/* ==============================
+   Main Content
+================================= */
+.center-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ==============================
+   Events & Weather Section
+================================= */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Weather */
+.current-weather {
+    background: var(--primary-color);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.current-weather i {
+    margin: 10px 0;
+    color: var(--secondary-color);
+}
+
+.current-weather p {
+    font-size: 1.2rem;
+}
+
+/* ==============================
+   Events Section
+================================= */
+.events {
+    background: var(--secondary-color);
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.events h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Weather Forecast */
+.weather-forecast {
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.weather-forecast span {
+    font-size: 1.4rem;
+}
+
+/* ==============================
+   Business Directory
+================================= */
+.directory {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+    padding: 20px;
+    background: var(--background-color);
+}
+
+.business {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.business-header h3 {
+    color: var(--primary-color);
+}
+
+.business-logo img {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.business-details p {
+    margin: 5px 0;
+}
+
+.business-details a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* ==============================
+   Footer
+================================= */
+footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+.footer {
+    display: flex; /* Use Flexbox */
+    justify-content: space-between; /* Space between the left, center, and right sections */
+    align-items: center; /* Vertically align items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-contact {
+    flex: 1; /* Allow this section to take up available space */
+    text-align: left; /* Align text to the left */
+}
+
+.footer-socials {
+    flex: 1; /* Allow this section to take up available space */
+    text-align: center; /* Center the social icons */
+}
+
+.footer-rightside {
+    flex: 1; /* Allow this section to take up available space */
+    text-align: left; /* Align text to the right */
+}
+
+.footer-socials a {
+    margin: 0 10px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: var(--secondary-color);
+}
+
+.footer-contact p,
+.footer-rightside p {
+    margin: 5px 0;
+}
+
