@@ -1,0 +1,79 @@
+/* ==============================
+   Large Screen Styles (more than 960px)
+================================= */
+@media (min-width: 961px) {
+    /* ==============================
+       Header Styling for Larger Screens
+    ================================= */
+    .header {
+        max-width: 1200px; /* Increased max width for larger screens */
+        padding: 0 40px;
+    }
+
+    .heading h1 {
+        font-size: 2.2rem; /* Larger font size for headings */
+    }
+
+    /* ==============================
+       Navigation for Larger Screens
+    ================================= */
+    nav ul {
+        display: flex;
+        justify-content: flex-end; /* Align navigation to the right */
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    /* ==============================
+       Hero Section for Larger Screens
+    ================================= */
+    .hero-image img {
+        width: 100%; /* Make the image span full width */
+        max-width: 1400px; /* Set max width for larger screens */
+        margin-bottom: 50px;
+    }
+
+    .button {
+        margin-top: -120px; /* Adjust button position */
+        margin-left: 700px;
+    }
+
+    /* ==============================
+       Events Grid for Larger Screens
+    ================================= */
+    .events-grid {
+        grid-template-columns: repeat(3, 1fr); /* Increase columns for larger screens */
+    }
+
+    /* ==============================
+       Business Directory for Larger Screens
+    ================================= */
+    .directory {
+        grid-template-columns: repeat(2, 1fr); /* Increase columns */
+        padding: 40px;
+    }
+
+    .business {
+        padding: 30px; /* Add more padding for a more spacious feel */
+    }
+
+    /* ==============================
+       Footer for Larger Screens
+    ================================= */
+    .footer {
+        padding: 30px;
+    }
+
+    .footer-contact,
+    .footer-socials,
+    .footer-rightside {
+        flex: 1;
+        text-align: left;
+    }
+
+    .footer-socials a {
+        margin: 0 15px;
+    }
+}
