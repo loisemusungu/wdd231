@@ -5,8 +5,7 @@
     /* ==============================
        Header Styling for Larger Screens
     ================================= */
-    .header {
-        max-width: 1200px; /* Increased max width for larger screens */
+    .header { 
         padding: 0 40px;
     }
 
@@ -30,8 +29,6 @@
        Hero Section for Larger Screens
     ================================= */
     .hero-image img {
-        width: 100%; /* Make the image span full width */
-        max-width: 1400px; /* Set max width for larger screens */
         margin-bottom: 50px;
     }
 
