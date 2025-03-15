@@ -79,6 +79,10 @@ nav ul li a:hover {
     color: var(--secondary-color);
 }
 
+.hamburger {
+    display: none;
+}
+
 /* ==============================
    Hero Section
 ================================= */
@@ -192,6 +196,8 @@ nav ul li a:hover {
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
     gap: 20px;
     padding: 20px;
+    margin-top: 20px;
+    border-radius: 6px;
     background: var(--background-color);
 }
 
