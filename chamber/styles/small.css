@@ -2,7 +2,7 @@
    Mobile Responsive Styles
 ================================= */
 @media screen and (max-width: 768px) {
-    * General Body Styles */
+    /* General Body Styles */
     body {
         margin: 10px;
         padding: 10px;
