@@ -50,6 +50,11 @@ header {
     font-weight: 700;
 }
 
+.tag {
+    font-size: 1.0rem;
+    font-weight: 200;
+}
+
 .heading p {
     font-size: 1rem;
 }
