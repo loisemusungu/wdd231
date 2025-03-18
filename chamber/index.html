@@ -27,6 +27,7 @@
     <script src="scripts/date.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/goldBusiness.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
     <script src="https://kit.fontawesome.com/2bf2e5cf5f.js" crossorigin="anonymous"></script>
 
     <link rel="icon" href="images/favicon.ico">
@@ -75,20 +76,20 @@
                 </div>
                 <div class="current-weather">
                     <h3>Current Weather</h3>
-                    <i class="fas fa-cloud-sun fa-3x"></i>
-                    <p>75°F</p>
-                    <p>Partly Cloudy</p>
-                    <p>High: 85°</p>
-                    <p>Low: 65°</p>
-                    <p>Humidity: 25%</p>
-                    <p>Sunrise: 6.00am</p>
-                    <p>Sunset: 7.00pm</p>
+                    <i id="weather-icon" class="fas fa-cloud-sun fa-3x"></i>
+                    <p id="temperature">75°F</p>
+                    <p id="condition">Partly Cloudy</p>
+                    <p id="high-temp">High: 85°</p>
+                    <p id="low-temp">Low: 65°</p>
+                    <p id="humidity">Humidity: 25%</p>
+                    <p id="sunrise">Sunrise: 6.00am</p>
+                    <p id="sunset">Sunset: 7.00pm</p>
                 </div>
                 <div class="weather-forecast">
                     <h3>Weather Forecast</h3>
-                    <p>Today: <span><strong>90°F</strong></span></p>
-                    <p>Wednesday: <span><strong>85°F</strong></span></p>
-                    <p>Thursday: <span><strong>80°F</strong></span></p>
+                    <p id="forecast-today">Today: <span><strong>90°F</strong></span></p>
+                    <p id="forecast-wednesday">Wednesday: <span><strong>85°F</strong></span></p>
+                    <p id="forecast-thursday">Thursday: <span><strong>80°F</strong></span></p>
                 </div>
             </div>
             <div class="directory" id="businessDirectory">
