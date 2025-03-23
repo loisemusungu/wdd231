@@ -1,8 +1,6 @@
 // Fetch weather data from OpenWeather API
-require("dotenv").config();
 
-const apiKey = process.env.API_KEY;
-console.log("API key:", apiKey);
+const apiKey = "d165625d9119746643af2ddd8978d9b7";
 const city = "Nairobi";
 
 const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
