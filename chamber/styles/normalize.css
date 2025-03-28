@@ -390,7 +390,7 @@ input[type="submit"]:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 200px;
-    background: white;
+    background: var(--background-color);
 }
 
 /* Hover effect */
@@ -412,7 +412,7 @@ input[type="submit"]:hover {
 }
 
 .modal-content {
-    background: white;
+    background: var(--background-color);
     padding: 20px;
     margin: 15% auto;
     width: 50%;
