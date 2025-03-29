@@ -9,9 +9,12 @@
     <meta name="author" content="Loise Musungu">
 
     <meta property="og:title" content="Join Nairobi Chamber">
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="website">
     <meta property="og:description" content="Sign up for a membership in Nairobi Chamber of Commerce.">
     <meta property="og:url" content="https://loisemusungu.github.io/wdd231/chamber/join.html">
+    <meta property="og:image" content="https://loisemusungu.github.io/wdd231/chamber/images/hero.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,181 +29,182 @@
     <script src="scripts/join.js" defer></script>
     <script src="https://kit.fontawesome.com/2bf2e5cf5f.js" crossorigin="anonymous"></script>
 
+    <link rel="icon" href="images/favicon.ico">
 </head>
-<body>
-    <header>
-        <div class="header">
-            <div class="heading">
-                <h1>Nairobi Commerce</h1>
-                <p>Chamber of Commerce</p>
+    <body>
+        <header>
+            <div class="header">
+                <div class="heading">
+                    <h1>Join Nairobi Commerce</h1>
+                    <p>Chamber of Commerce</p>
+                </div>
+                
+                <div class="logo">
+                    <a href="directory.html">
+                        <img src="images/directory-logo.png" alt="Chamber Ecommerce Logo">
+                    </a>
+                </div>
+                <nav>
+                    <button class="hamburger" id="hamburger" aria-label="Main Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="join.html">Join</a></li>
+                        <li><a href="#">Discover</a></li>
+                    </ul>
+                </nav>
             </div>
-            
-            <div class="logo">
-                <a href="directory.html">
-                    <img src="images/directory-logo.png" alt="Chamber Ecommerce Logo">
-                </a>
-            </div>
-            <nav>
-                <button class="hamburger" id="hamburger" aria-label="Main Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="join.html">Join</a></li>
-                    <li><a href="#">Discover</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        </header>
 
-    <main>
-        <div class="form-container">
-            <h2>Join the Nairobi Chamber</h2>
-            <form action="thankyou.html" method="GET">
-                <!-- First Name -->
-                <div class="form-group">
-                    <label for="first-name">First Name</label>
-                    <input type="text" id="first-name" name="first-name" required autocomplete="given-name" title="Enter your first name">
+        <main>
+            <div class="form-container">
+                <h2>Join the Nairobi Chamber</h2>
+                <form action="thankyou.html" method="GET">
+                    <!-- First Name -->
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" required autocomplete="given-name" title="Enter your first name">
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" required autocomplete="family-name" title="Enter your last name">
+                    </div>
+
+                    <!-- Organizational Title -->
+                    <div class="form-group">
+                        <label for="organization-title">Organizational Title</label>
+                        <input type="text" id="organization-title" name="organization-title" required pattern="[A-Za-z\s\-]{7,}" title="Enter your title with at least 7 characters">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@domain.com" title="Enter your email address">
+                    </div>
+
+                    <!-- Mobile Phone -->
+                    <div class="form-group">
+                        <label for="phone">Mobile Phone</label>
+                        <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Enter your mobile phone number">
+                    </div>
+
+                    <!-- Business Name -->
+                    <div class="form-group">
+                        <label for="business-name">Business Name</label>
+                        <input type="text" id="business-name" name="business-name" required autocomplete="organization" title="Enter your business name">
+                    </div>
+
+                    <!-- Membership Level -->
+                    <div class="form-group">
+                        <label for="membership-level">Membership Level</label>
+                        <select id="membership-level" name="membership-level">
+                            <option value="np">NP Membership (Non-Profit)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </div>
+
+                    <!-- Business Description -->
+                    <div class="form-group">
+                        <label for="description">Business Description</label>
+                        <textarea id="description" name="description" title="Provide a brief description of your business"></textarea>
+                    </div>
+
+                    <!-- Timestamp (Hidden) -->
+                    <input type="hidden" name="timestamp" id="timestamp">
+
+                    <!-- Submit Button -->
+                    <div class="form-group">
+                        <input type="submit" value="Submit" title="Submit your form">
+                    </div>
+                </form>
+
+                <!-- Membership Cards -->
+                <div class="membership-cards">
+                    <div class="card" id="np-card">
+                        <h3>NP Membership</h3>
+                        <p>No Fee</p>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#np-modal">Learn More</a>
+                    </div>
+                    <div class="card" id="bronze-card">
+                        <h3>Bronze Membership</h3>
+                        <p>Affordable</p>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#bronze-modal">Learn More</a>
+                    </div>
+                    <div class="card" id="silver-card">
+                        <h3>Silver Membership</h3>
+                        <p>Exclusive Benefits</p>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#silver-modal">Learn More</a>
+                    </div>
+                    <div class="card" id="gold-card">
+                        <h3>Gold Membership</h3>
+                        <p>Premium Support</p>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#gold-modal">Learn More</a>
+                    </div>
                 </div>
 
-                <!-- Last Name -->
-                <div class="form-group">
-                    <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" name="last-name" required autocomplete="family-name" title="Enter your last name">
+                <!-- Modals for Membership Details -->
+                <!-- NP Membership Modal -->
+                <div class="modal" id="np-modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>NP Membership Benefits</h3>
+                        <p>Details about NP membership...</p>
+                    </div>
                 </div>
-
-                <!-- Organizational Title -->
-                <div class="form-group">
-                    <label for="organization-title">Organizational Title</label>
-                    <input type="text" id="organization-title" name="organization-title" required pattern="[A-Za-z\s\-]{7,}" title="Enter your title with at least 7 characters">
+                <!-- Bronze Membership Modal -->
+                <div class="modal" id="bronze-modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Bronze Membership Benefits</h3>
+                        <p>Details about Bronze membership...</p>
+                    </div>
                 </div>
-
-                <!-- Email -->
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@domain.com" title="Enter your email address">
+                <!-- Silver Membership Modal -->
+                <div class="modal" id="silver-modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Silver Membership Benefits</h3>
+                        <p>Details about Silver membership...</p>
+                    </div>
                 </div>
-
-                <!-- Mobile Phone -->
-                <div class="form-group">
-                    <label for="phone">Mobile Phone</label>
-                    <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Enter your mobile phone number">
-                </div>
-
-                <!-- Business Name -->
-                <div class="form-group">
-                    <label for="business-name">Business Name</label>
-                    <input type="text" id="business-name" name="business-name" required autocomplete="organization" title="Enter your business name">
-                </div>
-
-                <!-- Membership Level -->
-                <div class="form-group">
-                    <label for="membership-level">Membership Level</label>
-                    <select id="membership-level" name="membership-level">
-                        <option value="np">NP Membership (Non-Profit)</option>
-                        <option value="bronze">Bronze Membership</option>
-                        <option value="silver">Silver Membership</option>
-                        <option value="gold">Gold Membership</option>
-                    </select>
-                </div>
-
-                <!-- Business Description -->
-                <div class="form-group">
-                    <label for="description">Business Description</label>
-                    <textarea id="description" name="description" title="Provide a brief description of your business"></textarea>
-                </div>
-
-                <!-- Timestamp (Hidden) -->
-                <input type="hidden" name="timestamp" id="timestamp">
-
-                <!-- Submit Button -->
-                <div class="form-group">
-                    <input type="submit" value="Submit" title="Submit your form">
-                </div>
-            </form>
-
-            <!-- Membership Cards -->
-            <div class="membership-cards">
-                <div class="card" id="np-card">
-                    <h3>NP Membership</h3>
-                    <p>No Fee</p>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#np-modal">Learn More</a>
-                </div>
-                <div class="card" id="bronze-card">
-                    <h3>Bronze Membership</h3>
-                    <p>Affordable</p>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#bronze-modal">Learn More</a>
-                </div>
-                <div class="card" id="silver-card">
-                    <h3>Silver Membership</h3>
-                    <p>Exclusive Benefits</p>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#silver-modal">Learn More</a>
-                </div>
-                <div class="card" id="gold-card">
-                    <h3>Gold Membership</h3>
-                    <p>Premium Support</p>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#gold-modal">Learn More</a>
-                </div>
-            </div>
-
-            <!-- Modals for Membership Details -->
-            <!-- NP Membership Modal -->
-            <div class="modal" id="np-modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h3>NP Membership Benefits</h3>
-                    <p>Details about NP membership...</p>
-                </div>
-            </div>
-            <!-- Bronze Membership Modal -->
-            <div class="modal" id="bronze-modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h3>Bronze Membership Benefits</h3>
-                    <p>Details about Bronze membership...</p>
-                </div>
-            </div>
-            <!-- Silver Membership Modal -->
-            <div class="modal" id="silver-modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h3>Silver Membership Benefits</h3>
-                    <p>Details about Silver membership...</p>
+                <!-- Gold Membership Modal -->
+                <div class="modal" id="gold-modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Gold Membership Benefits</h3>
+                        <p>Details about Gold membership...</p>
+                    </div>
                 </div>
             </div>
-            <!-- Gold Membership Modal -->
-            <div class="modal" id="gold-modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h3>Gold Membership Benefits</h3>
-                    <p>Details about Gold membership...</p>
+        </main>
+
+        <footer>
+            <div class="footer">
+                <div class="footer-contact">
+                    <p><strong>Nairobi Chamber of Commerce</strong></p>
+                    <p>123 Main Street</p>
+                    <p>Nairobi, Kenya</p>
+                    <p>+254 705 123 456</p>
+                    <p><a href="mailto:info@nairobigg.org">info@nairobigg.org</a></p>
+                </div>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-instagram-square fa-2x"></i></a>
+                </div>
+                <div class="footer-rightside">
+                    <p>WDD231 Class Project</p>
+                    <p>Loise Musungu</p>
+                    <p>&copy; <span id="currentyear"></span> Nairobi Chamber of Commerce</p>
+                    <div>Last Modified <span id="lastmodifications"></span></div>
                 </div>
             </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer">
-            <div class="footer-contact">
-                <p><strong>Nairobi Chamber of Commerce</strong></p>
-                <p>123 Main Street</p>
-                <p>Nairobi, Kenya</p>
-                <p>+254 705 123 456</p>
-                <p><a href="mailto:info@nairobigg.org">info@nairobigg.org</a></p>
-            </div>
-            <div class="footer-socials">
-                <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
-                <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
-                <a href="#"><i class="fab fa-instagram-square fa-2x"></i></a>
-            </div>
-            <div class="footer-rightside">
-                <p>WDD231 Class Project</p>
-                <p>Loise Musungu</p>
-                <p>&copy; <span id="currentyear"></span> Nairobi Chamber of Commerce</p>
-                <div>Last Modified <span id="lastmodifications"></span></div>
-            </div>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 </html>
