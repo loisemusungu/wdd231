@@ -21,13 +21,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/smaller.css">
+    <link rel="stylesheet" href="styles/large.css">
 
     <script src="scripts/date.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/goldBusiness.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
     <script src="https://kit.fontawesome.com/2bf2e5cf5f.js" crossorigin="anonymous"></script>
 
     <link rel="icon" href="images/favicon.ico">
@@ -51,50 +51,23 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="directory.html">Directory</a></li>
                     <li><a href="join.html">Join</a></li>
-                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="discover.html" class="active">Discover</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <div class="hero">
-            <div class="hero-image">
-                <img src="images/homepage.png" alt="Chamber Ecommerce">
-            </div>
-            <div class="button">
-                <a href="join.html">Join Now</a>
-            </div>
-        </div>
-        <div class="center-content">
-            <h2>Home</h2>
-            <div class="events-grid">
-                <div class="events">
-                    <h3>Events</h3>
+        <div class="discover-container">
+            <aside id="sidebar">
+                <p id="visit-message"></p>
+            </aside>
+
+            <div id="items-grid">
+                
                 </div>
-                <div class="current-weather">
-                    <h3>Current Weather</h3>
-                    <i id="weather-icon" class="fas fa-cloud-sun fa-3x"></i>
-                    <p id="temperature">75°F</p>
-                    <p id="condition">Partly Cloudy</p>
-                    <p id="high-temp">High: 85°</p>
-                    <p id="low-temp">Low: 65°</p>
-                    <p id="humidity">Humidity: 25%</p>
-                    <p id="sunrise">Sunrise: 6.00am</p>
-                    <p id="sunset">Sunset: 7.00pm</p>
-                </div>
-                <div class="weather-forecast">
-                    <h3>Weather Forecast</h3>
-                    <p id="forecast-today">Today: <span><strong>90°F</strong></span></p>
-                    <p id="forecast-wednesday">Wednesday: <span><strong>85°F</strong></span></p>
-                    <p id="forecast-thursday">Thursday: <span><strong>80°F</strong></span></p>
-                </div>
-            </div>
-            <div class="directory" id="businessDirectory">
-                <!-- The gold memebership businesses will be dynamically populated here -->
-            </div>
         </div>
     </main>
     <footer>

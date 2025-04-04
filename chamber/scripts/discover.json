@@ -1,0 +1,52 @@
+{
+    "items": [
+        {
+            "name": "Nairobi National Park",
+            "address": "Nairobi, Kenya",
+            "description": "A wildlife park in Nairobi offering a unique blend of nature and city.",
+            "image": "nairobi-national-park.webp"
+        },
+        {
+            "name": "Giraffe Centre",
+            "address": "Lang'ata, Nairobi, Kenya",
+            "description": "A conservation center for the endangered Rothschild giraffe.",
+            "image": "giraffe-centre.webp"
+        },
+        {
+            "name": "Karen Blixen Museum",
+            "address": "Karen, Nairobi, Kenya",
+            "description": "A museum located at the former home of Danish author Karen Blixen.",
+            "image": "karen-blixen-museum.webp"
+        },
+        {
+            "name": "David Sheldrick Wildlife Trust",
+            "address": "Nairobi, Kenya",
+            "description": "A sanctuary for orphaned elephants, focusing on conservation efforts.",
+            "image": "david-sheldrick-wildlife-trust.webp"
+        },
+        {
+            "name": "Bomas of Kenya",
+            "address": "Lang'ata, Nairobi, Kenya",
+            "description": "A cultural center showcasing traditional Kenyan music and dance.",
+            "image": "bomas-of-kenya.webp"
+        },
+        {
+            "name": "Nairobi Railway Museum",
+            "address": "Nairobi, Kenya",
+            "description": "A museum displaying Kenya's railway history, including old locomotives and carriages.",
+            "image": "railway-museum.webp"
+        },
+        {
+            "name": "Kazuri Beads",
+            "address": "Nairobi, Kenya",
+            "description": "A pottery workshop producing handmade ceramic beads, pottery, and other jewelry.",
+            "image": "kazuri-beads.webp"
+        },
+        {
+            "name": "Nairobi National Museum",
+            "address": "Nairobi, Kenya",
+            "description": "A museum that exhibits Kenya's rich heritage, culture, and natural history.",
+            "image": "national-museum.webp"
+        }
+    ]
+}
