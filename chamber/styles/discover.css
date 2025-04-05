@@ -7,6 +7,12 @@
   --text-color: #333333;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
 /* Message styles */
 #visit-message {
@@ -18,11 +24,14 @@
 }
 
 /* Cards Container */
-
+.cards-grid {
+  padding: 5rem;
+  column-gap: 3rem;
+}
 /* Card Styles */
 .card {
-  background-color: white;
-  border: 1px solid #ddd;
+  background-color: var(--background-color);
+  border: 1px solid var(--text-color);
   border-radius: 8px;
   overflow: hidden;
   padding: 1rem;
@@ -60,19 +69,19 @@
 .card-description {
   grid-area: description;
   font-size: 1rem;
-  color: #555;
+  color: var(--text-color);
 }
 
 .card-address {
   grid-area: address;
   font-size: 0.9rem;
-  color: #777;
+  color: var(--text-color);
 }
 
 .card-button {
   grid-area: button;
   background-color: var(--accent-color);
-  color: white;
+  color: var(--background-color);
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -86,16 +95,23 @@
 }
 
 /* Media Queries for Responsive Layout */
-@media (min-width: 641px) and (max-width: 1024px) {
+@media only screen and (min-width: 38rem) {
   /* Medium screens: 2 cards in a row */
-  .cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .card {
+  grid-template-areas: 
+    "image title"
+    "image description"
+    "image address"
+    "image button";
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 10px;
+}
 }
 
-@media (min-width: 1025px) {
+@media only screen and (min-width: 64rem) {
   /* Large screens: Only 3 cards in a row */
-  .cards-grid {
-    grid-template-columns: repeat(3, 1fr); /* Limit to 3 cards per row */
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Limit to 3 cards per row */
   }
 }
