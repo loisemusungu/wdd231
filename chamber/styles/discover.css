@@ -110,8 +110,7 @@
 
 @media only screen and (min-width: 64rem) {
   /* Large screens: Only 3 cards in a row */
-  .cards {
-    display: grid;
+  .cards-grid {
     grid-template-columns: 1fr 1fr; /* Limit to 3 cards per row */
   }
 }
