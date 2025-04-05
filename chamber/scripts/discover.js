@@ -1,48 +1,63 @@
-// Get the current date and time
-const currentDate = new Date();
-const lastVisitDate = localStorage.getItem("lastVisitDate");
+// ---------- Visit Message ----------
+const messageContainer = document.getElementById("visit-message");
 
-// Calculate the time difference between the current visit and the last visit
-if (lastVisitDate) {
-  const lastVisit = new Date(parseInt(lastVisitDate));
-  const diffTime = currentDate - lastVisit;
-  const diffDays = Math.floor(diffTime / (1000 * 3600 * 24));
+const MILLISECONDS_IN_A_DAY = 1000 * 60 * 60 * 24;
+const lastVisit = localStorage.getItem("lastVisit");
+const now = Date.now();
 
-  let visitorMessage = "";
-  if (diffDays === 0) {
-    visitorMessage = "Back so soon! Awesome!";
-  } else if (diffDays === 1) {
-    visitorMessage = `You last visited 1 day ago.`;
-  } else if (diffDays > 1) {
-    visitorMessage = `You last visited ${diffDays} days ago.`;
-  }
-  document.getElementById("visit-message").innerText = visitorMessage; // Updated ID here
-} else {
-  document.getElementById("visit-message").innerText =
+if (!lastVisit) {
+  messageContainer.textContent =
     "Welcome! Let us know if you have any questions.";
+} else {
+  const daysDifference = Math.floor((now - lastVisit) / MILLISECONDS_IN_A_DAY);
+  if (daysDifference < 1) {
+    messageContainer.textContent = "Back so soon! Awesome!";
+  } else if (daysDifference === 1) {
+    messageContainer.textContent = "You last visited 1 day ago.";
+  } else {
+    messageContainer.textContent = `You last visited ${daysDifference} days ago.`;
+  }
 }
 
-// Store the current date as the last visit date
-localStorage.setItem("lastVisitDate", currentDate.getTime());
+// Save current visit to localStorage
+localStorage.setItem("lastVisit", now);
 
-// Fetch and display the items of interest from the JSON file
+// ---------- Load Cards from JSON ----------
+const cardsContainer = document.getElementById("items-container");
+
 fetch("scripts/discover.json")
   .then((response) => response.json())
   .then((data) => {
-    const itemsGrid = document.getElementById("items-grid");
-    data.items.forEach((item) => {
+    // Define the grid-template-areas dynamically
+    const gridAreas = [];
+    data.items.forEach((item, index) => {
+      gridAreas.push(`card${index + 1}`);
+    });
+
+    // Set the grid-template-areas style dynamically
+    cardsContainer.style.gridTemplateAreas = `"${gridAreas.join(" ")}"`;
+
+    // Create cards for each item
+    data.items.forEach((item, index) => {
       const card = document.createElement("div");
       card.classList.add("card");
+      card.style.gridArea = `card${index + 1}`; // Assign each card a unique grid area
+
       card.innerHTML = `
-                <h2>${item.name}</h2>
-                <figure>
-                    <img src="images/${item.image}" alt="${item.name}">
-                </figure>
-                <address>${item.address}</address>
-                <p>${item.description}</p>
-                <button>Learn More</button>
-            `;
-      itemsGrid.appendChild(card);
+        <h2 class="card-title">${item.name}</h2>
+        <figure class="card-image">
+          <img src="images/${item.image}" alt="${item.name}" width="300" height="200" loading="lazy">
+        </figure>
+        <p class="card-description">${item.description}</p>
+        <address class="card-address">${item.address}</address>
+        <button class="card-button">Learn More</button>
+      `;
+
+      cardsContainer.appendChild(card);
     });
   })
-  .catch((error) => console.error("Error loading items:", error));
+  .catch((error) => {
+    console.error("Error loading JSON data:", error);
+    cardsContainer.innerHTML =
+      "<p>Sorry, failed to load content. Please try again later.</p>";
+  });
