@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Urban Swaras Running Club",
+    "location": "Nairobi CBD",
+    "meeting_schedule": "Saturdays at 7:00 AM",
+    "contact": "info@urbanswaras.co.ke"
+  },
+  {
+    "name": "Nairobi Hash House Harriers",
+    "location": "Karen",
+    "meeting_schedule": "Mondays at 6:00 PM",
+    "contact": "contact@nairobihhh.com"
+  },
+  {
+    "name": "Swara Safari Runners",
+    "location": "Westlands",
+    "meeting_schedule": "Wednesdays & Saturdays",
+    "contact": "swarasafari@gmail.com"
+  },
+  {
+    "name": "Kenya Ultra Runners",
+    "location": "Runda",
+    "meeting_schedule": "Sundays at 6:00 AM",
+    "contact": "kenyaultra@run.ke"
+  },
+  {
+    "name": "Karura Forest Trail Runners",
+    "location": "Karura Forest",
+    "meeting_schedule": "Weekends 7:00 AM",
+    "contact": "karurarunners@gmail.com"
+  },
+  {
+    "name": "Thika Road Runners",
+    "location": "Thika Road, Nairobi",
+    "meeting_schedule": "Tuesdays & Fridays at 5:30 AM",
+    "contact": "thikaroadrunners@gmail.com"
+  },
+  {
+    "name": "Lang’ata Road Warriors",
+    "location": "Lang’ata",
+    "meeting_schedule": "Saturdays 6:30 AM",
+    "contact": "langatawarriors@gmail.com"
+  },
+  {
+    "name": "Ngong Hills Climbers",
+    "location": "Ngong Hills",
+    "meeting_schedule": "Sundays at 6:00 AM",
+    "contact": "ngongrunners@outlook.com"
+  },
+  {
+    "name": "Kilimani Morning Sprinters",
+    "location": "Kilimani",
+    "meeting_schedule": "Weekdays 6:00 AM",
+    "contact": "kilimanisprinters@gmail.com"
+  },
+  {
+    "name": "Gigiri Runners Club",
+    "location": "Gigiri",
+    "meeting_schedule": "Wednesdays & Fridays 5:45 AM",
+    "contact": "gigirirunners@runclub.ke"
+  },
+  {
+    "name": "Eastlands Fit Club",
+    "location": "Eastlands",
+    "meeting_schedule": "Mondays and Thursdays 6:00 PM",
+    "contact": "eastlandsfitclub@gmail.com"
+  },
+  {
+    "name": "Lavington Striders",
+    "location": "Lavington",
+    "meeting_schedule": "Tuesdays 6:00 AM",
+    "contact": "lavingtonstriders@protonmail.com"
+  },
+  {
+    "name": "South B Joggers",
+    "location": "South B, Nairobi",
+    "meeting_schedule": "Saturdays 7:00 AM",
+    "contact": "southbjoggers@gmail.com"
+  },
+  {
+    "name": "Embakasi Evening Pacers",
+    "location": "Embakasi",
+    "meeting_schedule": "Weekdays 6:30 PM",
+    "contact": "embakasipacers@runner.ke"
+  },
+  {
+    "name": "Roysambu Road Runners",
+    "location": "Roysambu",
+    "meeting_schedule": "Fridays at 6:00 AM",
+    "contact": "roysamburunners@live.com"
+  }
+]
