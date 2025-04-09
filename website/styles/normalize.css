@@ -104,6 +104,22 @@ section a {
   text-decoration: underline;
 }
 
+/* Styling for Club Cards */
+#club-list {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 1rem;
+}
+
+.club-card {
+  background: var(--background-color);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
 footer {
   text-align: center;
   padding: 1rem;
