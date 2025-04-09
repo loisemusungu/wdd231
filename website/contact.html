@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Nairobi Running Clubs to get more information or ask questions." />
+  <title>Contact Us | Nairobi Running Clubs</title>
+  
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
+  <script src="scripts/menu.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Nairobi Running Clubs</h1>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Running Clubs</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+    <button id="menu-button" aria-label="Toggle Menu">
+      <span id="menu-icon">☰</span>
+    </button>
+  </header>
+
+  <main>
+    <section>
+      <h2>Contact Us</h2>
+      <p>Have questions or suggestions? We'd love to hear from you!</p>
+
+      <form id="contact-form" action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nairobi Running Clubs | <a href="contact.html">Contact Us</a></p>
+  </footer>
+</body>
+</html>
