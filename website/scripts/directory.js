@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.classList.add("club-card");
 
         card.innerHTML = `
+          <img src="${club.image}" alt="${club.name} logo or photo" class="club-image" loading="lazy">
           <h3>${club.name}</h3>
           <p><strong>Location:</strong> ${club.location}</p>
           <p><strong>Meeting:</strong> ${club.meeting_schedule}</p>
