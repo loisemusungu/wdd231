@@ -30,6 +30,7 @@ h1, h2, h3 {
 
 .hero {
   border-radius: 8px;
+  text-align: center;
 }
 
 nav {
