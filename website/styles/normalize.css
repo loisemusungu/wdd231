@@ -177,6 +177,12 @@ form button:hover {
   background-color: #2e6528;
 }
 
+/* no.of visits */
+.visit-count {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #444;
+}
 
 footer {
   text-align: center;
